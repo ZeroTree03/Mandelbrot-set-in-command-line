@@ -23,13 +23,13 @@ int main()
 		{
 			double Re = (double)j / WIDTH * 2.0f - 1.0f;	// Translate coordinates for Real Numbers
 			double Im = (double)i / HEIGHT * 2.0f - 1.0f;	// Translate coordinates for Imagined Numbers
-			Re *= aspect * pixelaspect;						// Fix for width in command line		
+			Re *= aspect * pixelaspect;			// Fix for width in command line		
 
 			complex<double> Zn(0, 0);
 			complex<double> Complex(Re, Im);
 			for (int n = 0; n < ITERATIONS; n++)
 			{
-				Zn = pow(Zn, 2) + Complex;					// Mandelbrot set calculating for every pixel
+				Zn = pow(Zn, 2) + Complex;		// Mandelbrot set calculating for every pixel
 
 				if (abs(Zn) < 4) {
 					pixel = '$';		
